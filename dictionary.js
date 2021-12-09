@@ -21,7 +21,7 @@ const main = ()=>{
             str_i++;
             
             if(dict_i >= thisDictWord.length){
-                max = thisDictWord.length;
+                max = thisDictWord.length > max?thisDictWord.length:max;
             }
         }
     }
