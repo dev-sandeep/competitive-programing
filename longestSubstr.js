@@ -14,7 +14,7 @@ const main = ()=>{
     let i = 0, uniq_char = 0;
     let obj = {}, final_str = "";
     while(uniq_char <= k && i < str.length){
-        if(!str[i] in obj){
+        if(!obj[str[i]]){
             obj[str[i]] = true;
             uniq_char++;
         }
