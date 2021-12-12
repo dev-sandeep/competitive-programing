@@ -5,15 +5,23 @@
  * k = 2
  * ans = "aab"
  * 
+ * Idea - put everything in a object and then get it
  */
     
+const str = "aabbcc";
+const k = 2;
 const main = ()=>{
     let i = 0, uniq_char = 0;
-    let obj = {};
-    while(uniq_char <= k){
-        if(!str[i] in obj)
+    let obj = {}, final_str = "";
+    while(uniq_char <= k && i < str.length){
+        if(!str[i] in obj){
             obj[str[i]] = true;
+            uniq_char++;
+        }
+        final_str += str[i];
+        i++;
     }
 }
 
 main();
+console.log(final_str);
